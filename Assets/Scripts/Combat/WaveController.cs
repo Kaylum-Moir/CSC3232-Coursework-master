@@ -32,7 +32,7 @@ public class WaveController : MonoBehaviour
 
     private IEnumerator HandleWaves()
     {
-        for (int stage = 0; stage <= 1; stage++)
+        for (int stage = 0; stage <= 3; stage++)
         {
             //Debug.Log("WAVE STARTING");
             yield return StartCoroutine(Wave(stage)); // Wait for each wave to complete before starting the next
