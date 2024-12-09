@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994c8dd919766ea449314c596e44f8d8, type: 3}
+  m_Name: AssaultRifle
+  m_EditorClassIdentifier: 
+  name: Assault Rifle
+  baseDamage: 20
+  maxRange: 50
+  fireRate: 300
+  reloadTime: 2
+  bulletSpread: 0.4
+  maxAmmo: 35
+  isReloading: 0
+  fireSounds:
+  - {fileID: 8300000, guid: 807fe5267c0d9b543907eb7c668a4976, type: 3}
+  - {fileID: 8300000, guid: 2a6dae9a650df594389e1bcde98a7633, type: 3}
+  - {fileID: 8300000, guid: 28b7bf0ca5d184045b49d83e5aa7aa2f, type: 3}
+  - {fileID: 8300000, guid: 1a61f45894afa5143a141f1db4f662b8, type: 3}
+  reloadSounds:
+  - {fileID: 8300000, guid: 134aaf2036d863a46af44f890af7f253, type: 3}
+  - {fileID: 8300000, guid: e6439e8bc4932704d82734187710f0a8, type: 3}
+  - {fileID: 8300000, guid: 6eff8806aeb5af448845c02e7045e493, type: 3}
