@@ -45,7 +45,7 @@ public class WaveController : MonoBehaviour
 
     private IEnumerator Wave(int stage)
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         //Debug.Log("COROUTINE1 STARTING");
 

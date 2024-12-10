@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AgentHealthController : MonoBehaviour
@@ -30,7 +31,7 @@ public class AgentHealthController : MonoBehaviour
 
     public void ApplyDamage(float damagePoints)
     {
-        GetComponent<AgentController>().stateMachine.ChangeState(AIStateID.Chasing); // Alerted to the player
+        AIStateMachine stateMachine = GetComponent<AgentController>().stateMachine;
         currentHealth -= damagePoints;
         // Do something to visualise taking hit
         Debug.Log("Agent took "+damagePoints+"hp");
@@ -38,6 +39,10 @@ public class AgentHealthController : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else if (stateMachine.currentState != AIStateID.Chasing)
+        {
+            stateMachine.ChangeState(AIStateID.Chasing); // Alerted to the player
         }
     }
 

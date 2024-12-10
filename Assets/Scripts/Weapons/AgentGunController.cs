@@ -28,7 +28,7 @@ public class AgentGunController : MonoBehaviour
 
     public void Shoot()
     {
-        Debug.Log("AGENT TRIED TO SHOOT");
+        //Debug.Log("AGENT TRIED TO SHOOT");
         if (localGunData.currentAmmo > 0f && !localGunData.isReloading && shotCooldown > 1f / (gunData.fireRate / 60f)) // fireRate is maximum shots per minute
         {
             Debug.DrawRay(parent.transform.position, parent.transform.forward * 50f, Color.red, duration: 1f);
@@ -51,10 +51,10 @@ public class AgentGunController : MonoBehaviour
         }
         else
         {
-            Debug.Log("AGENT FAILED TO SHOOT");
-            Debug.Log("Ammo Count: "+localGunData.currentAmmo.ToString());
-            Debug.Log("Is Reloading: "+localGunData.isReloading);
-            Debug.Log("Shot Cooldown: "+(shotCooldown > 1f / (gunData.fireRate / 60f)).ToString());
+            //Debug.Log("AGENT FAILED TO SHOOT");
+            //Debug.Log("Ammo Count: "+localGunData.currentAmmo.ToString());
+            //Debug.Log("Is Reloading: "+localGunData.isReloading);
+            //Debug.Log("Shot Cooldown: "+(shotCooldown > 1f / (gunData.fireRate / 60f)).ToString());
         }
     }
 

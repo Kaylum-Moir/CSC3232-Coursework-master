@@ -16,11 +16,6 @@ public class AIChasingState : AIState
         //Transform player = GameObject.FindGameObjectWithTag("Player").transform;
         //Debug.Log("Player name is: "+player.name);
 
-         Collider[] nearbyAgents = Physics.OverlapSphere(agent.transform.position, agent.config.broadcastRange, LayerMask.GetMask("Enemy"));
-         foreach (Collider near in nearbyAgents)
-         {
-            near.GetComponent<AgentController>().stateMachine.ChangeState(AIStateID.Chasing); // Turns nearby enemies onto the player
-         }
     }
 
     public void Exit(AgentController agent)
@@ -32,4 +27,9 @@ public class AIChasingState : AIState
     {
         agent.navAgent.destination = agent.player.position;
     }
+
+    private Collider[] GetNearbyPOIs(AgentController agent)
+    {
+        return Physics.OverlapSphere(agent.transform.position, agent.config.broadcastRange, LayerMask.GetMask("Enemy"));
+    } // get all items on POI layer
 }
